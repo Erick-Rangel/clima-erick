@@ -1,4 +1,4 @@
-const apiKey = process.env.REACT_APP_APIKEY;
+const apiKey = REACT_APP_APIKEY;
 
 export default function fetchCity(ciudad, setData) {
   fetch(
