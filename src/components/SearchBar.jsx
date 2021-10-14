@@ -27,8 +27,6 @@ export default function SearchBar({ onSearch }) {
         <IoAdd />
       </button>
 </div>
-<div>
-<img src="https://mega.nz/file/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw" alt="video width="200px" height="200px"/>
-</div>    
+  
   );
 }
