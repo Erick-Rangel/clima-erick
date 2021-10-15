@@ -10,19 +10,18 @@ export default function SearchBar({ onSearch }) {
     setSearch("");
   };
 
+  const newLocal = <div>
+    <iframe
+      width="640"
+      height="360"
+      frameborder="0"
+      src="https://mega.nz/embed/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw"
+      allowfullscreen
+    >video</iframe>
+  </div>;
   return (
     <div className={styles.searchBar}>
-<<<<<<< HEAD
-              <NavLink to="/"> 
-        <span className={styles.head}> <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block aling-top" alt=""/>
-        Henry - Weather App
-        
-      </span>
-         </NavLink>         
-        <input   
-=======
       <input
->>>>>>> adcf17b1e0ff9049c02e97019a6162c2f257051b
         className={styles.input}
         id="searchInput"
         placeholder="Agregar una cuidad..."
@@ -33,18 +32,10 @@ export default function SearchBar({ onSearch }) {
           if (e.key === "Enter") handleOnSearch();
         }}
       />
+      {newLocal}  
       <button className={styles.button} onClick={handleOnSearch}>
         <IoAdd />
       </button>
-<div>
-        <iframe
-          width="640"
-          height="360"
-          frameborder="0"
-          src="https://mega.nz/embed/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw"
-          allowfullscreen
-        >video</iframe>
-        </div>  
     </div>
   );
 }
