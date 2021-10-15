@@ -26,6 +26,15 @@ export default function SearchBar({ onSearch }) {
       <button className={styles.button} onClick={handleOnSearch}>
         <IoAdd />
       </button>
+<div>
+        <iframe
+          width="640"
+          height="360"
+          frameborder="0"
+          src="https://mega.nz/embed/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw"
+          allowfullscreen
+        >video</iframe>
+        </div>  
     </div>
   );
 }
