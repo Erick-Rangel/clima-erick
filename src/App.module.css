@@ -28,7 +28,7 @@
 
 .app,
 .container {
-  /* background-image: url("./assets/Soñar-con-nubes-negras.jpg"); */
+  background-image: url("./assets/Soñar-con-nubes-negras.jpg");
   background-size: cover;
   position: fixed;
   border-radius: 1.5rem;
