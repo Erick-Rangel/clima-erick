@@ -18,6 +18,7 @@ export default function SearchBar({ onSearch }) {
               <NavLink to="/"> 
         <span className={styles.head}> <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block aling-top" alt=""/>
         Henry - Weather App
+        
       </span>
          </NavLink>         
         <input   
