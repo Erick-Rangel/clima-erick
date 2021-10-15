@@ -43,6 +43,7 @@ export default function SearchBar({ onSearch }) {
           allowfullscreen
         >video</iframe>
         </div>
+        
 
 <Link exact to="/about">
    <span className={styles.about}>About</span>
