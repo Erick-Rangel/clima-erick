@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./SearchBar.module.css";
-import Logo from "../img/logoHenry.png"
 import { IoAdd } from "react-icons/io5";
-import { Link, NavLink } from "react-router-dom";
-
 
 export default function SearchBar({ onSearch }) {
   // acá va tu código
@@ -15,12 +12,7 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <div className={styles.searchBar}>
-              <NavLink to="/"> 
-        <span className={styles.head}> <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block aling-top" alt=""/>
-        Henry - Weather App
-      </span>
-         </NavLink>         
-        <input   
+      <input
         className={styles.input}
         id="searchInput"
         placeholder="Agregar una cuidad..."
@@ -30,23 +22,10 @@ export default function SearchBar({ onSearch }) {
         onKeyPress={(e) => {
           if (e.key === "Enter") handleOnSearch();
         }}
-        />
+      />
       <button className={styles.button} onClick={handleOnSearch}>
         <IoAdd />
       </button>
- <div>
-        <iframe
-          width="640"
-          height="360"
-          frameborder="0"
-          src="https://mega.nz/embed/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw"
-          allowfullscreen
-        >video</iframe>
-        </div>        
-<Link exact to="/about">
-   <span className={styles.about}>About</span>
-</Link>
-
-</div>
+    </div>
   );
 }
