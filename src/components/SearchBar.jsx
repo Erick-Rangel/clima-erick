@@ -42,9 +42,7 @@ export default function SearchBar({ onSearch }) {
           src="https://mega.nz/embed/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw"
           allowfullscreen
         >video</iframe>
-        </div>
-        
-
+        </div>        
 <Link exact to="/about">
    <span className={styles.about}>About</span>
 </Link>
