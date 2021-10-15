@@ -20,7 +20,7 @@ export default function SearchBar({ onSearch }) {
     >video</iframe>
   </div>;
   return (
-    <div className={styles.searchBar}>
+    /* <div className={styles.searchBar}>
       <input
         className={styles.input}
         id="searchInput"
@@ -31,11 +31,12 @@ export default function SearchBar({ onSearch }) {
         onKeyPress={(e) => {
           if (e.key === "Enter") handleOnSearch();
         }}
-      />
-      {newLocal}  
-      <button className={styles.button} onClick={handleOnSearch}>
+      /> */
+     /*  <button className={styles.button} onClick={handleOnSearch}>
         <IoAdd />
-      </button>
+      </button> */
+      <div>
+        {newLocal}  
     </div>
   );
 }
