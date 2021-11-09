@@ -10,15 +10,6 @@ export default function SearchBar({ onSearch }) {
     setSearch("");
   };
 
-  /*const newLocal = <div>
-    <iframe
-      width="640"
-      height="360"
-      frameborder="0"
-      src="https://mega.nz/embed/XBBhDaJQ#zkvTPbo52uyyxMM93swgQWgKEorfBUcOQCI1RkElUaw"
-      allowfullscreen
-    >video</iframe>
-  </div>;*/
   return (
     <div className={styles.searchBar}>
       <input
@@ -31,11 +22,10 @@ export default function SearchBar({ onSearch }) {
         onKeyPress={(e) => {
           if (e.key === "Enter") handleOnSearch();
         }}
-      /> 
-       <button className={styles.button} onClick={handleOnSearch}>
+      />
+      <button className={styles.button} onClick={handleOnSearch}>
         <IoAdd />
-      </button> 
-       
+      </button>
     </div>
   );
 }

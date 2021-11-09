@@ -1,15 +1,12 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import fetchCity from "./services/fetchCity.js";
-import fetchCoords from "./services/fetchCoords";
+import Card from "./components/Card.jsx";
+import Cards from "./components/Cards.jsx";
+import SearchBar from "./components/SearchBar.jsx";
 import styles from "./App.module.css";
-import CitiesPage from "./views/CitiesPage.js";
-import Ciudad from "./views/Ciudad"
-
+import fetchCity from "./services/fetchCity.js";
 
 function App() {
   const [data, setData] = React.useState([]);
-  
   function onSearch(ciudad) {
     if (data?.length > 2) {
       alert("No puedes agregar más ciudades.");
@@ -24,34 +21,39 @@ function App() {
     });
   }
 
-  React.useEffect(() => {
-    if (navigator.geolocation)
-      navigator.geolocation.getCurrentPosition((pos) => {
-        fetchCoords(pos.coords.latitude, pos.coords.longitude, setData);
-      });
-  }, []);
-
   return (
     <div className={styles.app}>
       <div className={styles.bkg} />
       <div className={styles.container}>
-        <Route path="/" exact>
-          <CitiesPage
-            data={data}
-            handleOnClose={handleOnClose}
-            onSearch={onSearch}
-          />
-        </Route>
-        <Route
-          path="/city/:id"
-          exact
-          render={({ match, history }) => {
-            const id = parseInt(match.params.id);
-            return <Ciudad id={id} onBack={history.goBack} />;
-          }}
-        />
+        <div>
+          <SearchBar onSearch={onSearch} />
+        </div>
+        <div className={styles.citiesContainer}>
+          {data.length > 0 ? (
+            <>
+              <Card
+                primary
+                max={data[data?.length - 1].max}
+                min={data[data?.length - 1].min}
+                name={data[data?.length - 1].name}
+                img={data[data?.length - 1].img}
+              />
+              <Cards cities={data} onClose={handleOnClose} />
+            </>
+          ) : (
+            <span
+              style={{
+                textAlign: "center",
+                width: "70vw",
+                margintop: "2rem",
+                fontSize: "2rem",
+              }}
+            >
+              Agrega la ciudad de tu interes
+            </span>
+          )}
+        </div>
       </div>
-            
     </div>
   );
 }

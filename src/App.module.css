@@ -25,7 +25,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 20vh;
 }
-<<<<<<< HEAD
 .citiesContainer {
   display: flex;
   height: 20vh;
@@ -33,9 +32,6 @@
   backdrop-filter: blur(16px);
   justify-content: space-between;
 }
-=======
-
->>>>>>> 3306f55b18f59f4312a630b6ece3b23dbbd36ee5
 .app,
 .container {
   background-image: url("./assets/Soñar-con-nubes-negras.jpg");
