@@ -1,7 +1,14 @@
 .searchBar {
-  display: flex;
+ /*  display: flex;
   margin-top: 1.5rem;
-  margin-left: 1.5rem;
+  margin-left: 1.5rem; */
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center
 }
 .input {
   background-color: transparent;
@@ -34,4 +41,21 @@
 
 .button:hover {
   background-color: #ffffff60;
+}
+
+.about{
+  color:hsl(0, 100%, 100%);
+  font:#ffffff;
+}
+.head{
+  color:hsl(0, 100%, 100%);
+  font:#ffffff;
+}
+
+.vid {
+    height: 90vh;
+    
+}  
+.vid video {
+  height: 100%;
 }
